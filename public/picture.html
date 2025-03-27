@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="resources/PL_logo.ico">
+    <link rel="stylesheet" href="picture.css">
+    <title>PhotoLife</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <ul>
+            <li><a href="#">PhotoLife</a></li>
+            <li class="dropdown">
+                <a href="#">Menu ▼</a>
+                <div class="dropdown-menu">
+                    <a href="#">Kpop</a>
+                    <a href="#">Professional</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Video Section -->
+    <div class="container">
+        <video id="video" autoplay></video>
+        <img id="idolOverlay" src="o_elisia.png" alt="Idol Overlay">
+        <p id="countdown"></p>
+        <button class="button-53" role="button" onclick="startTimer()">Capture</button>
+    </div>
+
+    <!-- Hidden Modal for Captured Image -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="capturedImage" alt="Captured Photo">
+            <a id="downloadBtn" download="photo.png">Download</a>
+        </div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+    <script src="picture.js"></script>
+</body>
+</html>
